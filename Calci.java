@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 interface Calci
 {
- public static int getSum(int n1,int n2);
+ public  int getSum(int n1,int n2);
 }
 
 class CalciImpl implements Calci
 {
- public static int getSum(int n1,int n2){
+ public  int getSum(int n1,int n2){
   return n1+n2;
 }
 }
@@ -19,6 +19,7 @@ public static void main(String[] args) {
     System.out.println("Enter 2 numbers to find sum");
     int num1=sc.nextInt();
     int num2=sc.nextInt();
-    System.out.println(num1+"+"+num2+"="+CalciImpl.getSum(num1, num2));
+    CalciImpl c=new CalciImpl();
+    System.out.println(num1+"+"+num2+"="+c.getSum(num1, num2));
 }
 }
